@@ -43,32 +43,36 @@
           <div class="about-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              Front-end Developer with 2.8 years of experience in HTML, CSS,
-              JavaScript and React.Js.Proficient in collaborative teamwork,
+              I am a Front-end Developer with 2.8 years of experience in HTML,
+              CSS, JavaScript and React.Js.Proficient in collaborative teamwork,
               adept at problem-solving, and committed to ensuring customer
               satisfaction.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents active-tab">
+            <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Frontend Development</span></li>
+                <li><span>Frontend Web Development</span></li>
                 <li><span>SQl</span></li>
                 <li><span>Java</span></li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>2021-Current</span><br />Frontend Developer at XYZ
+                  <span>2021-Current</span><br />Frontend Developer at Greenices
+                  technology solutions
                 </li>
-                <li><span>2020-2021</span><br />Engineer trainee at ABC</li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="education">
               <ul>
                 <li>
                   <span>B.Tech</span><br />Madhav Institute of Technology and
@@ -90,10 +94,9 @@
             <div class="description">
               <h3>Portfolio Website</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                vitae optio quasi laborum, amet atque. Iusto sequi explicabo
-                sunt repudiandae vel aliquid possimus aliquam sit. Dignissimos
-                officiis facere perspiciatis eius?
+                Built a responsive and visually appealing user interface using
+                HTML for structure, Vanilla CSS for styling, and JavaScript for
+                interactivity and deployed it on netlify.
               </p>
               <a href="#"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
@@ -103,32 +106,32 @@
           <div class="myprojects">
             <img src="Images.png/portfolio.png" alt="project2" />
             <div class="description">
-              <h3>Kanban Board</h3>
+              <h3>Project Management Tool</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                vitae optio quasi laborum, amet atque. Iusto sequi explicabo
-                sunt repudiandae vel aliquid possimus aliquam sit. Dignissimos
-                officiis facere perspiciatis eius?
+                Developed a Project Management Tool, optimizing project
+                workflows and fostering collaboration. Implemented a Task
+                tracking system for adding, editing, and tracking task statuses,
+                enhancing project efficiency
               </p>
-              <a href="#"
+              <a href="https://sparkly-jelly-9f4354.netlify.app/" target="_blank"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
               ></a>
             </div>
           </div>
           <div class="myprojects">
             <img
-              src="Images.png/e4885cbefe5de223bd0dd889fdeaa699.png"
+              src="Images.png/movie reccom.jpeg"
               alt="project3"
             />
             <div class="description">
-              <h3>Splitwise</h3>
+              <h3>Movie Recommendation Application</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                vitae optio quasi laborum, amet atque. Iusto sequi explicabo
-                sunt repudiandae vel aliquid possimus aliquam sit. Dignissimos
-                officiis facere perspiciatis eius?
+                Architected a dynamic Movie
+                Recommendation System, fetching real-time
+                trending movies data from the TMDB API,
+                and deployed on Netlify.
               </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+              <a href="https://lighthearted-madeleine-4e9460.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
@@ -185,4 +188,20 @@
     src="https://kit.fontawesome.com/0d512d0676.js"
     crossorigin="anonymous"
   ></script>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
 </html>
